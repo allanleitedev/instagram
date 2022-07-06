@@ -1,0 +1,214 @@
+/* RESET CSS */ 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+p{
+	font-family: 'Open sans', sans-serif;
+}
+
+/* COLORS */
+
+:root{
+    --bg:#fafafa;
+    --primary:#0095F6;
+    --white:#ffffff;
+    --grey:#8E8E8E;
+	--grey-light:#e0e0e0;
+    --black:#000;
+}
+/* STYLE */
+
+body{
+    background-color: var(--bg);
+}
+
+.container{
+	max-width: 920px;
+	width: 80%;
+    display: flex;
+	margin: auto;
+	padding: 50px 0px;
+}
+
+.phone{
+	position: relative;
+}
+
+.phonebg > img{
+	width: 100%;
+	height: 100%;
+	min-height: 432px;
+	min-width: 320px;
+}
+
+.screen{
+	position: absolute;
+	top: 25px;
+	right: 58px;
+	height: 80%;
+	opacity: 0;
+	transition: 1s;
+}
+
+.visible{
+	opacity: 100!important;
+}
+
+.screen img{
+	height: 100%;
+}
+
+.login{
+	width: 40%;
+	padding: 20px 0px;
+}
+
+.self-login{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--white);
+	padding: 30px 50px;
+	border: 1px solid var(--grey-light);
+}
+
+.profile{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.photo{
+	margin: 30px auto;
+	height: 90px;
+	width: 90px;
+	overflow: hidden;
+	border-radius: 50%;
+	border: 1px solid var(--grey-light);
+}
+
+.photo img{
+	height: 100%;
+}
+
+.btn-login{
+	border: none;
+	padding: 10px;
+	border-radius: 5px;
+	color: var(--white);
+	background-color: var(--primary);
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
+.btn-logout{
+	background-color: transparent;
+	border: none;
+	font-weight: 700;
+	color: var(--primary);
+}
+
+.switch-account{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--white);
+	padding: 30px 50px;
+	border: 1px solid var(--grey-light);
+	margin-top: 10px;
+	font-size: 0.9rem;
+	color: var(--grey);
+}
+
+.switch-account p{
+	margin: 5px;
+}
+
+.switch-account span{
+	color: var(--primary);
+	font-weight: 600;
+	font-size: 0.8rem;
+}
+
+.app{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 30px 20px;
+	margin-top: 10px;
+	font-size: 0.9rem;
+}
+
+.stores{
+	display: flex;
+	flex: auto;
+}
+
+.store-item{
+	width: 50%;
+	margin: 20px 0px;
+	padding: 5px;
+}
+
+.stores img{
+	width: 100%;
+}
+
+/*HOVERS*/
+
+span:hover, button:hover, .store-item:hover, .logo:hover{
+	cursor: pointer;
+}
+
+@media(max-width: 957px){
+	.phone{
+		display: none;
+	}
+
+	.login{
+		width: 100%;
+		max-width: 350px;
+		margin: auto;
+	}
+}
